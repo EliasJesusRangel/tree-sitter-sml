@@ -1,3 +1,4 @@
+const baseConfig = require('../eslint.base.config.js');
 const { FlatCompat } = require('@eslint/eslintrc');
 const js = require('@eslint/js');
 const nxEslintPlugin = require('@nx/eslint-plugin');
@@ -8,7 +9,8 @@ const compat = new FlatCompat({
 });
 
 module.exports = [
-  { plugins: { '@nx': nxEslintPlugin } },
+  ...baseConfig,
+
   ...compat
     .config({
       extends: ['plugin:@nx/typescript'],

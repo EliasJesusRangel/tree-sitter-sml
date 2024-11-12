@@ -13,7 +13,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {},
+    "paths": {
+      "@tree-sitter-sml/sml-runner": ["libs/sml-runner/src/index.ts"],
+      "@tree-sitter-sml/utilities": ["libs/utilities/src/index.ts"]
+    },
     "esModuleInterop": true
   },
   "files": [],

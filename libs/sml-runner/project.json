@@ -1,0 +1,21 @@
+{
+  "name": "sml-runner",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sml-runner/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/sml-runner",
+        "main": "libs/sml-runner/src/index.ts",
+        "tsConfig": "libs/sml-runner/tsconfig.lib.json",
+        "format": ["cjs"],
+        "assets": ["libs/sml-runner/*.md"],
+        "generatePackageJson": true
+      }
+    }
+  }
+}
